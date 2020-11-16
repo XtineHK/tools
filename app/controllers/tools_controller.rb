@@ -1,6 +1,6 @@
 class ToolsController < ApplicationController
   def index
-    @tools = Tool.all
+    @tool = Tool.all
   end
 
   def show
