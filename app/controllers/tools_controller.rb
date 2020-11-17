@@ -9,9 +9,9 @@ class ToolsController < ApplicationController
     @tool = Tool.find(params[:id])
   end
 
-  # private
+  private
 
-  # def tool_params
-  #   params.require(:tool).permit(:daily_price, :location, :description, :name, photo:[])
-  # end
+  def tool_params
+    params.require(:tool).permit(:daily_price, :location, :description, :name, :photo)
+  end
 end

@@ -5,3 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# db/seeds.rb
+Booking.destroy_all
+Tool.destroy_all
+User.destroy_all
+
+user1 = User.create!(
+  email:    "michel@example.com",
+  password: "password",
+  )
+
+user2 = User.create!(
+  email:    "lucie@example.com",
+  password: "password",
+  )
+
+tool1 = Tool.new(
+  daily_price: 40,
+  location:   "Le Val Andre",
+  description: "autoportee et silencieuse cette tondeuse blablablab",
+  name: "lawn-mower-1",
+  user: user1
+  )
+tool1.photo.attach(io: File.open(Rails.root.join('db/fixtures/tools/lawn-mower-1.jpg')), filename: 'lawn-mower-1.jpg')
+tool1.save!
+
+
+tool2 = Tool.new(
+  daily_price: 150,
+  location:   "Rennes",
+  description: "Du gros du lourd pour les grandes surfaces et l'herbe haute blablablab",
+  name: "lawn-mower-2",
+  user: user2
+  )
+tool2.photo.attach(io: File.open(Rails.root.join('db/fixtures/tools/lawn-mower-2.jpg')), filename: 'lawn-mower-2.jpg')
+tool2.save!
