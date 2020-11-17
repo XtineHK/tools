@@ -1,4 +1,6 @@
 class ToolsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @tool = Tool.all
   end
@@ -7,9 +9,9 @@ class ToolsController < ApplicationController
     @tool = Tool.find(params[:id])
   end
 
-  private
+  # private
 
-  def tool_params
-    params.require(:tool).permit(:daily_price, :location, :description, :name, photo:[])
-  end
+  # def tool_params
+  #   params.require(:tool).permit(:daily_price, :location, :description, :name, photo:[])
+  # end
 end
