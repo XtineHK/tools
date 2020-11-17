@@ -1,11 +1,25 @@
 .new-form {
   text-align: center;
-  padding: 80px 400px 80px 400px;
+  padding-top: 36px;
 }
 
 .text-form {
   border-radius: 8px;
   border: solid 0.2em;
   border-color: rgba(102, 141, 107, 0.5) hsla(60, 90%, 50%, .8) rgba(102, 141, 107, 0.5) hsla(60, 90%, 50%, .8);
+  display: inline-block;
 }
 
+.btn-submit {
+  border-radius: 8px;
+  display:block;
+  border: solid 0.1em;
+  color:hsla(60, 90%, 50%, .8);
+  background-color:rgba(102, 141, 107, 0.5);
+  display: inline-block;
+  margin-bottom:4px;
+}
+
+.btn-submit:hover {
+background:#F4F4F4;
+}
