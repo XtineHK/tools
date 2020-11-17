@@ -9,7 +9,7 @@ class MyToolsController < ApplicationController
   end
 
   def new
-    #@my_tool = MyTool.new
+    # @my_tool = Tool.new
   end
 
   def create
