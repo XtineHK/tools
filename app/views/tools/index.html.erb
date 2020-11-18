@@ -1,3 +1,8 @@
 index.html.erb
-
 tools
+<% @tool.each do |tool| %>
+    <li><%= link_to(tool.name, tool_path(tool)) %></li>
+    <p><%=tool.location%></p>
+    <p><%=tool.description%></p>
+    <p><%=tool.daily_price%></p>
+  <% end %>
