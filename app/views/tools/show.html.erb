@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <div class="card mb-3 card-show">
     <img class="image-show" <%= cl_image_tag @tool.photo.key %>>
     <div class="card-body">
@@ -7,4 +7,17 @@
       <p class="card-text"><small class="text-muted"><%=@tool.daily_price%>€</small></p>
     </div>
   </div>
+</div> -->
+
+<div class="main">
+  <ul class="cards">
+    <li class="cards_item-tool">
+      <div class="card-tool">
+        <div class="card_image"><img class="image-show" <%= cl_image_tag @tool.photo.key %></div>
+        <div class="card_content-tool">
+          <h2 class="card_title-tool"><%=@tool.name%></h2>
+          <p class="card_text-tool"><%=@tool.description%>€</p>
+          <button class="btn-tool card_btn-tool">For Rent</button>
+        </div>
+      </div>
 </div>
