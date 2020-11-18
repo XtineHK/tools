@@ -1,3 +1,10 @@
-index.html.erb
+<!-- my_tools index.html.erb  -->
+<h1> All my tools </h1>
+<ul>
+  <% @my_tools.each do |tool| %>
+    <li><%= tool.name %></li>
+    <li><%= tool.description %></li>
+    <li><%= tool.daily_price %></li>
+  <% end %>
+</ul>
 
-MyTool
