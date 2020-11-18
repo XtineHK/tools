@@ -1,2 +1,10 @@
-<%= cl_image_tag @tool.photo.key, height: 600, width: 400, crop: :fill %>
-
+<div class="card-show">
+  <div class="card mb-3">
+    <img <%= cl_image_tag @tool.photo.key %>>
+    <div class="card-body">
+      <h5 class="card-title"><%=@tool.name%></h5>
+      <p class="card-text"><%=@tool.description%></p>
+      <p class="card-text"><small class="text-muted"><%=@tool.daily_price%>€</small></p>
+    </div>
+  </div>
+</div>
