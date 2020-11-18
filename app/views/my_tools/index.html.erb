@@ -5,7 +5,7 @@
   <div class="card-product mb-4 mx-4">
     <%= cl_image_tag tool.photo.key %>
     <div class="card-product-infos">
-      <h2>Name: <%= tool.name %></h2>
+      <h2>Name:<%= link_to(tool.name, tool_path(tool))%></h2>
       <p>Infos:<%= tool.description %></p>
       <p>Fee per day: <%= tool.daily_price %> Euros</p>
     </div>
