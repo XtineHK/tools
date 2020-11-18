@@ -1,26 +1,168 @@
 // Specific CSS for your home-page
 
 h1 {
-  color:#668d6b;
-  font-size: 40px;
+  color:#ADC1B0;
+  font-size: 80px;
   font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
   ;
 
 }
 
 h2 {
-  color:#727c73;
-  font-size: 24px;
+  color:#6e6e6e;
+  font-size: 40px;
   font-family: arial;
+  font-weight: bold;
+  text-align: center;
 ;
 
 }
 
 p{
-  color:#434b43;
+  color:#616661;
   font-size: 16px;
   font-family: arial;
   text-align: center;
 ;
 
 }
+
+.logo-gros
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+}
+
+.banner .homepic{
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.banner .text {
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 45%;
+    color: white;
+    width: 55%;
+}
+
+.banner .btn {
+  background: rgb(245, 213, 29);
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  left: 10%;
+  right: 0;
+  top: 70%;
+  color: rgb(97, 97, 97);
+  width: 20%;
+  font-family: arial;
+  border-radius: 30px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.banner .btn:hover {
+  background: rgb(255, 255, 255);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-item{
+  background-color:#ADC1B0;
+  padding: 10px;
+  font-family: arial;
+  font-weight: bold;
+  color: rgb(97, 97, 97);
+  border-radius: 10px;
+}
+
+.flex-container2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color:#ADC1B0;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color:#ADC1B0;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 0,5;
+}
+.footer .fa-heart {
+  color:#ADC1B0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  width: auto;
+  height: 200px;
+}
+
+// // Smallest device
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
