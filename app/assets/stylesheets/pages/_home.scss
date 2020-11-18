@@ -11,13 +11,23 @@ h1 {
 
 }
 
-h2 {
+.banner h2 {
   color:#6e6e6e;
   font-size: 40px;
   font-family: arial;
   font-weight: bold;
   text-align: center;
-;
+  margin-bottom: 0;
+
+}
+
+.explication h2 {
+  color:#6e6e6e;
+  font-size: 40px;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
 
 }
 
@@ -38,46 +48,41 @@ p{
   height: 300px;
 }
 
+.banner {
+  height: 400px;
+  position: relative;
+
+}
+
 .banner .homepic{
   border-radius: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  box-sizing: border-box;
-  vertical-align: middle;
-  border-style: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   width: 100%;
 }
 
 .banner .text {
     background: rgba(255, 255, 255, 0.7);
-    z-index: 1;
     position: absolute;
     text-align: center;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 37%;
-    color: white;
-    width: 40%;
+    width: 60%;
+    top: 2rem;
+    left: 2rem;
+    border-radius: 10px;
 }
 
-.banner .btn {
+.banner .btn.btn-flat {
   background: rgb(245, 213, 29);
-  z-index: 1;
   position: absolute;
-  text-align: center;
-  margin: auto;
-  left: 12%;
-  right: 0;
-  top: 55%;
+  left: 45%;
+  bottom: 7rem;
   color: rgb(97, 97, 97);
-  width: 15%;
   font-family: arial;
   font-weight: bold;
   font-size: 20px;
-  border-style: solid;
   border-color: white;
   border-radius: 30px;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
