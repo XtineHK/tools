@@ -1,10 +1,14 @@
 <!-- my_tools index.html.erb  -->
 <h1> All my tools </h1>
-<ul>
-  <% @my_tools.each do |tool| %>
-    <li><%= tool.name %></li>
-    <li><%= tool.description %></li>
-    <li><%= tool.daily_price %></li>
-  <% end %>
-</ul>
+
+<% @my_tools.each do |tool| %>
+  <div class="card-product mb-4 mx-4">
+    <%= cl_image_tag tool.photo.key %>
+    <div class="card-product-infos">
+      <h2>Name: <%= tool.name %></h2>
+      <p>Infos:<%= tool.description %></p>
+      <p>Fee per day: <%= tool.daily_price %> Euros</p>
+    </div>
+  </div>
+<% end %>
 
