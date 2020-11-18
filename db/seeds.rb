@@ -80,7 +80,7 @@ tool4.save!
 
 
 tool5 = Tool.new(
-  daily_price: 70,
+  daily_price: 35,
   location:   "Iffendic",
   description: "Tondeuse thermique autotractée. Moteur puissant. Largeur de coupe 51cm. Adaptée pour des surfaces inférieures à 2000 m2.",
   name: "Elem",
@@ -90,7 +90,7 @@ tool5.photo.attach(io: File.open(Rails.root.join('db/fixtures/tools/lawn-mower-5
 tool5.save!
 
 tool6 = Tool.new(
-  daily_price: 70,
+  daily_price: 60,
   location:   "Iffendic",
   description: "Tondeuse thermique. Châssis en acier avec une largeur de coupe 56 cm. Réglage de hauteur centralisé (25-75 mm) sur toutes les roues.",
   name: "Grizzly",
@@ -100,7 +100,7 @@ tool6.photo.attach(io: File.open(Rails.root.join('db/fixtures/tools/lawn-mower-6
 tool6.save!
 
 tool7 = Tool.new(
-  daily_price: 70,
+  daily_price: 30,
   location:   "Iffendic",
   description: "Tondeuse à gazon thermique avec bac de ramassage de 45 litres. Largeur de coupe 41 cm.",
   name: "Yardforce",
@@ -110,7 +110,7 @@ tool7.photo.attach(io: File.open(Rails.root.join('db/fixtures/tools/lawn-mower-7
 tool7.save!
 
 tool8 = Tool.new(
-  daily_price: 70,
+  daily_price: 75,
   location:   "Le Val André",
   description: "Tondeuse electrique sans fil avec batterie de 60V 6Ah. Silencieuse. Largeur de coupe de 50 cm. Plusieurs hauteurs. Fonction mulching.",
   name: "Greenworks",
@@ -120,7 +120,7 @@ tool8.photo.attach(io: File.open(Rails.root.join('db/fixtures/tools/lawn-mower-8
 tool8.save!
 
 tool9 = Tool.new(
-  daily_price: 70,
+  daily_price: 180,
   location:   "Le Val André",
   description: "Cette tondeuse est autoportée. Largeur de coupe de 66 cm de coupe. Moteur Alpina OHV puissant. Fonction mulching. Ejection latérale.",
   name: "Alpina",
