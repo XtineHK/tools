@@ -1,6 +1,6 @@
-<div class="card-show">
-  <div class="card mb-3">
-    <img <%= cl_image_tag @tool.photo.key %>>
+<div>
+  <div class="card mb-3 card-show">
+    <img class="image-show" <%= cl_image_tag @tool.photo.key %>>
     <div class="card-body">
       <h5 class="card-title"><%=@tool.name%></h5>
       <p class="card-text"><%=@tool.description%></p>
