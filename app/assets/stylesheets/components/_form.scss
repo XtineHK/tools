@@ -23,3 +23,19 @@
 .btn-submit:hover {
 background:#F4F4F4;
 }
+
+.new-form-tool {
+  margin-bottom:16px;
+  text-align: center;
+  padding-top: 36px;
+  width:50%;
+  margin: auto;
+}
+
+.text-form-tool {
+  border-radius: 8px;
+  border: solid 0.2em;
+  border-color: rgba(102, 141, 107, 0.5) hsla(60, 90%, 50%, .8) rgba(102, 141, 107, 0.5) hsla(60, 90%, 50%, .8);
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+}
