@@ -26,16 +26,21 @@ class MyToolsController < ApplicationController
     @my_tool = Tool.find(params[:id])
   end
 
+  # def update
+  #   my_tool = Tool.find(params[:id])
+  #   my_tool.update(tool_params)
+  #   redirect_to my_tool_path(@my_tool)
+  # end
+
   def update
-    my_tool = Tool.find(params[:id])
-    my_tool.update(tool_params)
-    redirect_to my_tool_path(my_tool)
+    @tool = Tool.find(params[:id])
+    if @tool.update(my_tool_params)
+      redirect_to @tool, notice: 'Tool was successfully updated.'
+    else
+      render :edit
+    end
   end
 
-  # def destroy
-  #   my_tool = Tool.find(params[:id])
-  #   Tool.destroy
-  # end
   def destroy
     @tool.destroy
     redirect_to my_tools, notice: 'Tool was successfully destroyed.'
