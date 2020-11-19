@@ -16,7 +16,8 @@
         <div class="card_image"><img class="image-show" <%= cl_image_tag @tool.photo.key %></div>
         <div class="card_content-tool">
           <h2 class="card_title-tool"><%=@tool.name%></h2>
-          <p class="card_text-tool"><%=@tool.description%>€</p>
+          <p class="card_text-tool"><%=@tool.description%></p>
+          <p class="card_text-tool">Fee per day:     <%=@tool.daily_price%>€</p>
           <button class="btn-tool card_btn-tool">For Rent</button>
         </div>
       </div>

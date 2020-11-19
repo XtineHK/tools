@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-color">
-  <%= link_to "#", class: "avatar-navbar navbar-brand" do %>
+  <%= link_to "/", class: "avatar-navbar navbar-brand" do %>
     <%# <%= image_tag "https://png.pngtree.com/png-vector/20190909/ourlarge/pngtree-lawn-mower-isolated-simple-element-illustration-from-cleaning-lawn-png-image_1726697.jpg" %>
     <%= image_tag "logo-carre.png", alt: "logo" %>
     <% end %>
@@ -12,8 +12,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "/", class: "nav-link btn-login m-3" %>
+        <li class="nav-item active search">
+          <%= link_to "See my tools", "my_tools", class: "nav-link btn-login m-3" %>
+          <%= link_to "See my bookings", "#", class: "nav-link btn-login m-3" %>
+          <%= link_to "Add a new tool", "#", class: "nav-link btn-login m-3" %>
+
         </li>
         <li class="nav-item">
         </li>

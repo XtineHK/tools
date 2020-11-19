@@ -1,6 +1,6 @@
 .avatar-navbar img {
   // border-radius: 50%;
-  width: 500px;
+  width: 240px;
   // border: solid 0.1em;
   // border-color:hsla(60, 90%, 50%, .8);
 }
@@ -13,10 +13,14 @@
 .btn-login {
   border-radius: 8px;
   background-color: #F4F4F4;
-  width: 80px;
+  display: flex;
   text-align: center;
   border: solid 0.1em;
   border-color:hsla(60, 90%, 50%, .8);
+}
+
+.btn-login:hover {
+  background-color: rgba(102, 141, 107, 0.5);
 }
 
 .menu-avatar {
@@ -25,4 +29,8 @@
   border-radius: 8px;
   box-shadow: 8px 8px 4px 4px rgba(102, 141, 107, 0.5);
   border-color: rgba(102, 141, 107, 0.5);
+}
+
+.search {
+  display: flex;
 }
