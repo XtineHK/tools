@@ -9,6 +9,12 @@ class ToolsController < ApplicationController
     @tool = Tool.find(params[:id])
   end
 
+  def destroy
+    @my_tool = Tool.find(params[:id])
+    @my_tool.destroy
+    redirect_to my_tools_url, notice: 'Tool was successfully destroyed.'
+  end
+
   private
 
   def tool_params
