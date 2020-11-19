@@ -4,18 +4,13 @@
 <!-- .class.downcase.pluralize => @review -> reviews -->
 
 <div class="container">
-  <div class="new-form">
     <h2>Entrez vos dates de location</h2>
-    <div class="form-inputs p-3">
       <%= simple_form_for [@tool, @booking] do |f| %>
       <%= f.input :begin_date, as: :date, html5: true %>
       <%= f.input :end_date, as: :date, html5: true %>
-    </div>
-    <div class="form-actions btn-submit">
+
       <%= f.submit "Réserver" %>
       <% end %>
-    </div>
- <div>
 </div>
 
 
