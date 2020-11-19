@@ -1,13 +1,21 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
-    # you need to give an empty shell to your form_for!
+    @tool = Tool.find(params[:tool_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
-    booking.save
-    redirect_to booking_path(@booking)
+    @tool = Tool.find(params[:tool_id])
+    @booking.tool = @tool
+    @booking.user = current_user
+    @booking.price_to_invoice = (@booking.end_date - @booking.begin_date).to_i / 1.day * @tool.daily_price
+
+    if @booking.save
+     redirect_to profile_url, notice: 'Votre demande de réservation est envoyée au propriétaire et en attente de confirmation'
+     else
+     render :new
+    end
   end
 
   def edit

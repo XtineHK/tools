@@ -8,7 +8,7 @@
     </div>
   </div>
 </div> -->
-
+<h1><%=@tool.name%></h1>
 <div class="container">
   <ul class="main">
     <li class="cards_item-tool">
@@ -19,8 +19,8 @@
         </div>
         <div class="card_content-tool">
           <p class="card_text-tool"><%=@tool.description%></p>
-          <p class="card_text-tool">Fee per day:     <%=@tool.daily_price%>€</p>
-          <button class="btn-tool card_btn-tool">For Rent</button>
+          <p class="card_text-tool">Prix par jour:     <%=@tool.daily_price%>€</p>
+          <%= link_to "JE LOUE", new_tool_booking_path(@tool) , class: "btn btn-flat" %>
         </div>
       </div>
 </div>
