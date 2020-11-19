@@ -5,11 +5,12 @@
   <div class="card-product mb-4 mx-4">
     <%= cl_image_tag tool.photo.key , crop: :fill ,width: 190%>
     <div class="card-product-infos">
-      <h2>Name:<%= link_to(tool.name, tool_path(tool))%></h2>
-      <h2>City:<%= link_to(tool.location, tool_path(tool))%></h2>
+      <h2 id="tag">Name: <%= link_to(tool.name, tool_path(tool))%></h2>
+      <h2 id="tag">City:<%= link_to(tool.location, tool_path(tool))%></h2>
       <p>Infos:<%= tool.description %></p>
       <p>Fee per day: <%= tool.daily_price %> Euros</p>
-      <td><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td id="tag"><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td id="tag"><%= link_to 'Edit', new_my_tool_path%></td>
     </div>
   </div>
 <% end %>
