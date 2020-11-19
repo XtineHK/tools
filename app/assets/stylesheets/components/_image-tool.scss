@@ -28,7 +28,7 @@ img {
 }
 
 .btn-tool {
-  color: #ffffff;
+  color: white;
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -54,9 +54,8 @@ img {
 }
 
 .card-tool {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  background-color:white;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -75,7 +74,7 @@ img {
 }
 
 .card_title-tool {
-  color: #ffffff;
+  color:white;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -84,7 +83,7 @@ img {
 }
 
 .card_text-tool {
-  color: #ffffff;
+  color:white;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
@@ -92,6 +91,17 @@ img {
   text-align:left;
 }
 
+.main {
+  display: flex;
+}
+
+.name-tool {
+  text-align:center;
+  color: rgba(102, 141, 107, 0.5);
+  background-color:white;
+  border-radius: 16px;
+  box-shadow: 8px 8px 4px 4px rgba(102, 141, 107, 0.5);
+}
 // .made_by{
 //   font-weight: 400;
 //   font-size: 13px;
