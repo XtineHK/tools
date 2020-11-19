@@ -13,15 +13,15 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active search">
-          <%= link_to "Voir mes tondeuses", "my_tools", class: "nav-link btn-login m-3" %>
-          <%= link_to "Voir mes réservations", "#", class: "nav-link btn-login m-3" %>
-          <%= link_to "Ajouter une tondeuse en location", "my_tools/new", class: "nav-link btn-login m-3" %>
+          <%= link_to "Voir mes tondeuses", "my_tools", class: "nav-link m-3 btn-login" %>
+          <%= link_to "Voir mes réservations", "#", class: "nav-link m-3 btn-login" %>
+          <%= link_to "Ajouter une tondeuse en location", "my_tools/new", class: "nav-link m-3 btn-login" %>
 
         </li>
         <li class="nav-item">
         </li>
         <li class="nav-item dropdown">
-          <%= image_tag "https://avatarfiles.alphacoders.com/207/thumb-207370.jpg", class: "avatar dropdown-toggle m-3", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= image_tag "https://avatarfiles.alphacoders.com/207/thumb-207370.jpg", class: "zoom avatar dropdown-toggle m-3", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right menu-avatar" aria-labelledby="navbarDropdown">
             <%= link_to "Profile", "profile", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
