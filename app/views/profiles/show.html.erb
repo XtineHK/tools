@@ -2,14 +2,16 @@
 <h1> MY PROFILE </h1>
 
 <div class="container">
-  <div class="row justify-content-left">
-  <p> Profile's email:<%= @user.email %></p>
+  <div class="titre">
+    <h2> Mon email:<%= @user.email %></h2>
   </div>
-</div>
-
-<div class="container">
-  <div class="row justify-content-left">
-  <p> As a user here are the tools I rented: </p>
+  <br>
+  <br>
+  <br>
+  <div class="historique">
+    <div class = "titre">
+      <h2> Mon historique de tondeuses que j'ai louées </h2>
+    </div>
     <ul>
       <% if @my_own_bookings.present? %>
           <% @my_own_bookings.each do |booking| %>
@@ -21,20 +23,22 @@
       <% end  %>
     </ul>
   </div>
-</div>
 
 
-<div class="container">
+  <br>
+  <br>
+
   <!-- here add an Event listener so that the status changes and the btns disappear -->
-  <div class="row justify-content-left">
-    <p> As a owner here are the tools I let: </p>
+  <div class="Mes tondeuses">
+    <div class = "titre">
+    <h2> As a owner here are the tools I let: </h2></div>
+    <div class= "para">
     <ul>
       <% @bookings.each do |booking| %>
       <li><%= booking.tool.name %> - <%= booking.begin_date %> - <%= booking.end_date %><%= booking.status %> - <%= link_to "confirm", confirm_booking_path(booking), method: :patch, class: 'btn btn-primary' %> - <%= link_to "refuse",refuse_booking_path(booking), method: :patch, class: 'btn btn-danger' %></li>
       <% end %>
     </ul>
   </div>
-</div>
+
 
 </div>
-
