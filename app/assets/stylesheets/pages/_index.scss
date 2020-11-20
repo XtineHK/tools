@@ -1,3 +1,90 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "tools_index";
+
+#map {
+  width: 1000px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ADC1B0;
+  top: 24rem;
+  box-shadow: 8px 8px 4px 4px rgba(102, 141, 107, 0.5);
+
+}
+
+
+.tool-cards {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  grid-gap: 10px;
+}
+
+.card-product {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  overflow: hidden;
+  height: 250px;
+  width: 550px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ADC1B0;
+  box-shadow: 8px 8px 4px 4px rgba(102, 141, 107, 0.5);
+
+}
+
+.card-product img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-family: arial;
+  color: #ADC1B0;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.description {
+  font-weight: bold;
+}
+
+.logo-gros {
+top: 30rem;
+right : 5rem;
+}
+
+.fas {
+  color: #ADC1B0;
+}
+
+
+
+.card-product p{
+  line-height: 1.4;
+  opacity: .7;
+  font-family: arial;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: rgb(112, 112, 112);
+}
+
+.price {
+  font-family: arial;
+  font-size: 50px;
+  font-weight: bold;
+  color: pink;
+
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}

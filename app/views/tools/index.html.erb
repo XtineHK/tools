@@ -1,24 +1,33 @@
 <!-- index.html.erb -->
-<h1> All Available Tools </h1>
+<br>
+<h1> VOICI LES TONDEUSES DISPONIBLES </h1>
+<br>
+<br>
 
-<div class='tool-index'>
-  <div id="map"
+<div class='container'>
+ <div class='tool-index'>
+   <div id="map"
        style="width: 50%; height: 600px;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
-  <div class='tool-cards'>
-  <% @tools.each do |tool| %>
-    <div class="card-product mb-4 mx-4">
-      <%= cl_image_tag tool.photo.key %>
-      <div class="card-product-infos">
-        <h2>Name: <%= link_to(tool.name, tool_path(tool))%></h2>
-        <p>Infos:<%= tool.description %></p>
-        <p>Fee per day: <%= tool.daily_price %> Euros</p>
-        <p><%=tool.location%></p>
-      </div>
     </div>
-  <% end %>
-  </div>
+
+   <div class='tool-cards'>
+      <% @tools.each do |tool| %>
+       <div class="card-product">
+         <%= cl_image_tag tool.photo.key %>
+          <div class="card-product-infos">
+           <h2>Name: <%= link_to(tool.name, tool_path(tool))%></h2>
+           <div class= "description">
+           <p><i class="fas fa-question"></i>  <%= tool.description %></p></div>
+           <div class= "price">
+           <p><i class="fas fa-euro-sign"></i> <%= tool.daily_price %> / jour</p></div>
+           <p><i class="fas fa-search-location"></i>  <%=tool.location%></p>
+          </div>
+       </div>
+     <% end %>
+    <div>
+  <div>
+</div>
+
 </div>
