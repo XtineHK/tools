@@ -17,7 +17,7 @@
        <div class="card-product">
          <%= cl_image_tag tool.photo.key %>
           <div class="card-product-infos">
-           <h2>NOM <i class="fas fa-arrow-right"></i> <%= link_to(tool.name, tool_path(tool))%></h2>
+           <h2 class="tag"><%= link_to(tool.name, tool_path(tool))%></h2>
            <div class= "description">
            <p><i class="fas fa-question"></i>  <%= tool.description %></p></div>
            <div class= "price">
