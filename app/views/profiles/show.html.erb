@@ -1,1 +1,39 @@
-show.html.erb
+
+<h1> MY PROFILE </h1>
+
+<div class="container">
+  <div class="row justify-content-left">
+  <p> Profile's email:<%= @user.email %></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-left">
+  <p> As a user here are the tools I rented: </p>
+    <ul>
+      <% if @my_own_bookings.present? %>
+          <% @my_own_bookings.each do |booking| %>
+          <li> <%= booking.tool.name %> - Rented from <%= booking.begin_date %> - For a total of <%= booking.price_to_invoice%> Euros
+          <% end %>
+          </li>
+      <% else %>
+        You haven't rented a tool yet
+      <% end  %>
+    </ul>
+  </div>
+</div>
+
+
+<div class="container">
+  <!-- here add an Event listener so that the status changes and the btns disappear -->
+  <div class="row justify-content-left">
+    <p> As a owner here are the tools I let: </p>
+    <ul>
+      <% @bookings.each do |booking| %>
+      <li><%= booking.tool.name %> - <%= booking.begin_date %> - <%= booking.end_date %><%= booking.status %> - <%= link_to "confirm", confirm_booking_path(booking), method: :patch, class: 'btn btn-primary' %> - <%= link_to "refuse",refuse_booking_path(booking), method: :patch, class: 'btn btn-danger' %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+</div>
