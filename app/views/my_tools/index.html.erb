@@ -1,7 +1,22 @@
 <!-- my_tools index.html.erb  -->
-<h1> All my tools </h1>
-
+<h1 class="m-3"> All my tools </h1>
 <div class="container">
+ <% @my_tools.each do |tool| %>
+  <div class="card-product mb-4 mx-4">
+    <%= cl_image_tag tool.photo.key , crop: :fill ,width: 190%>
+    <div class="card-product-infos">
+      <h2 class="tag"><%= link_to(tool.name, tool_path(tool))%></h2>
+      <h2 class="tag">City:<%= link_to(tool.location, tool_path(tool))%></h2>
+      <p>Infos:<%= tool.description %></p>
+      <p>Fee per day: <%= tool.daily_price %> Euros</p>
+      <td class="tag"><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td class="tag"><%= link_to 'Edit', new_my_tool_path%></td>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<!-- <div class="container">
   <ul>
     <% @my_tools.each do |tool| %>
     <div class="card" style="width: 18rem;">
@@ -18,21 +33,4 @@
     <% end %>
     </div>
   </ul>
-</div>
-
-
-
-
- <% @my_tools.each do |tool| %>
-  <div class="card-product mb-4 mx-4">
-    <%= cl_image_tag tool.photo.key , crop: :fill ,width: 190%>
-    <div class="card-product-infos">
-      <h2 class="tag"><%= link_to(tool.name, tool_path(tool))%></h2>
-      <h2 class="tag">City:<%= link_to(tool.location, tool_path(tool))%></h2>
-      <p>Infos:<%= tool.description %></p>
-      <p>Fee per day: <%= tool.daily_price %> Euros</p>
-      <td class="tag"><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <td class="tag"><%= link_to 'Edit', new_my_tool_path%></td>
-    </div>
-  </div>
-<% end %>
+</div> -->
