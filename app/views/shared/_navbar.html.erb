@@ -13,10 +13,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active search">
-          <%= link_to "Voir mes tondeuses", "my_tools", class: "nav-link m-3 btn-login" %>
-          <%= link_to "Voir mes réservations", "#", class: "nav-link m-3 btn-login" %>
-          <%= link_to "Ajouter une tondeuse en location", "my_tools/new", class: "nav-link m-3 btn-login" %>
 
+          <p class="tag-nav nav-link m-3 btn-login"><%= link_to "Voir mes tondeuses", my_tools_path%></p>
+          <p class="tag-nav nav-link m-3 btn-login"><%= link_to "Voir mes réservations", profile_path%></p>
+          <p class="tag-nav nav-link m-3 btn-login"><%= link_to "Ajouter une tondeuse en location",new_my_tool_path%></p>
         </li>
         <li class="nav-item">
         </li>

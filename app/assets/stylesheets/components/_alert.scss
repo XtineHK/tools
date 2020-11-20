@@ -6,6 +6,12 @@
 }
 
 .tag a {
-  color: rgba(102, 141, 107, 0.5);
-  //text-decoration: rgba(102, 141, 107, 0.5);
+
+  color: rgba(102, 141, 107, 0.5) !important;
+
+}
+
+.tag-nav a {
+  color: #F4F4F4 !important;
+  text-decoration: none;
 }
