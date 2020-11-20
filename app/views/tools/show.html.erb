@@ -9,7 +9,7 @@
   </div>
 </div> -->
 <h1><%=@tool.name%></h1>
-
+<p class="tag back-list m-32"><%= link_to "Retour à la liste", tools_path%></p>
 <div class="container">
   <ul class="main">
     <li class="cards_item-tool">
@@ -22,4 +22,5 @@
           <%= link_to "JE LOUE", new_tool_booking_path(@tool) , class: "btn btn-flat" %>
         </div>
       </div>
+    </ul>
 </div>

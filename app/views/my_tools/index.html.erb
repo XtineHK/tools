@@ -24,11 +24,11 @@
     <%= cl_image_tag tool.photo.key , crop: :fill ,width: 190%>
     <div class="card-product-infos">
       <h2 class="tag"><%= link_to(tool.name, tool_path(tool))%></h2>
-      <h2 class="tag">City:<%= link_to(tool.location, tool_path(tool))%></h2>
+      <h2 class="tag">Ville:<%= link_to(tool.location, tool_path(tool))%></h2>
       <p>Infos:<%= tool.description %></p>
       <p>Fee per day: <%= tool.daily_price %> Euros</p>
-      <p class="tag"><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      <p class="tag"><%= link_to 'Edit', new_my_tool_path%></p>
+      <p class="tag1 btn-del-edit"><%= link_to 'Supprimer', tool, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <p class="tag1 btn-del-edit"><%= link_to 'Modifier', new_my_tool_path%></p>
     </div>
   </div>
 <% end %>
