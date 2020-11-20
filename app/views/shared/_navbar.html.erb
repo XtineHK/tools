@@ -23,7 +23,7 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://avatarfiles.alphacoders.com/207/thumb-207370.jpg", class: "zoom avatar dropdown-toggle m-3", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right menu-avatar" aria-labelledby="navbarDropdown">
-            <%= link_to "    Profile", "profile", class: "dropdown-item fas fa-user m-2" %>
+            <%= link_to "    Profile", profile_path, class: "dropdown-item fas fa-user m-2" %>
             <%= link_to "    Log out", destroy_user_session_path, method: :delete, class: "dropdown-item fas fa-sign-out-alt m-2" %>
           </div>
         </li>
