@@ -27,7 +27,7 @@
   overflow: hidden;
   height: 250px;
   width: 550px;
-  background: white;
+  background: #ffffff;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -52,8 +52,19 @@
   margin: 0;
 }
 
-.description {
+.card-product-infos .description p {
+  font-size: 15px;
+}
+
+.card-product-infos .location p {
+  font-size: 15px;
   font-weight: bold;
+}
+
+.card-product-infos .price p {
+  font-size: 25px;
+  background-color: #ADC1B0;
+  padding-left: 5px;
 }
 
 .logo-gros {
@@ -64,6 +75,12 @@ right : 5rem;
 .fas {
   color: #ADC1B0;
 }
+
+.fas.fa-euro-sign{
+  color: white;
+}
+
+
 
 
 
