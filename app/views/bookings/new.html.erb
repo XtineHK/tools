@@ -2,8 +2,9 @@
 
 <%# <%= cl_image_tag @tool.photo.key, height: 300, width: 400, crop: :fill %>
 <!-- .class.downcase.pluralize => @review -> reviews -->
-
 <div class="container">
+  <div class="col-sm-8 offset-sm-2 new-form-tool">
+    <div class="text-form-tool">
     <h2>Entrez vos dates de location</h2>
       <%= simple_form_for [@tool, @booking] do |f| %>
       <%= f.input :begin_date, as: :date, html5: true %>
@@ -11,9 +12,9 @@
 
       <%= f.submit "Réserver" %>
       <% end %>
+      </div>
+    </div>
 </div>
-
-
 <!-- <form action="/restaurants/2/reviews" method="post">
   <label for="content">Content</label>
   <input type="text" name="content">
