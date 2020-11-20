@@ -31,12 +31,11 @@
 
 }
 
-p{
+.introduction p{
   color:#616661;
   font-size: 16px;
   font-family: arial;
   text-align: center;
-;
 
 }
 
@@ -98,12 +97,10 @@ p{
 }
 
 .flex-item{
-  background-color:#ADC1B0;
   padding: 15px;
   font-family: arial;
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(97, 97, 97);
+  font-size: 25px;
+  color:#87978a;
   border-radius: 10px;
 }
 
@@ -148,6 +145,15 @@ p{
 
 .card-category {
   background-size: cover;
+  font-family: arial;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ADC1B0;
+  text-align: center;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ADC1B0;
+
   // background-position: center;
 }
 
