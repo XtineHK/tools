@@ -1,26 +1,27 @@
 
-<h1> MY PROFILE </h1>
+<h1> MON PROFILE </h1>
 
 <div class="container">
   <div class="titre">
-    <h2> Mon email:<%= @user.email %></h2>
+    <p><%= @user.email %></p>
   </div>
   <br>
   <br>
   <br>
   <div class="historique">
     <div class = "titre">
-      <h2> Mon historique de tondeuses que j'ai louées </h2>
+      <h2> Historique des tondeuses que j'ai louées </h2>
     </div>
-    <ul>
-      <% if @my_own_bookings.present? %>
-          <% @my_own_bookings.each do |booking| %>
-          <li> <%= booking.tool.name %> - Rented from <%= booking.begin_date %> - For a total of <%= booking.price_to_invoice%> Euros
+    <div class= "para tag">
+      <ul>
+        <% if @my_own_bookings.present? %>
+           <% @my_own_bookings.each do |booking| %>
+           <li> <%= link_to(booking.tool.name, tool_path(booking.tool))%> - Louée à partir de <%= booking.begin_date.strftime("%d/%m/%Y") %> - Pour un total de <%= booking.price_to_invoice%> Euros
           <% end %>
-          </li>
-      <% else %>
-        You haven't rented a tool yet
-      <% end  %>
+           </li>
+        <% else %>
+        Vous n'avez pas encore d'historique.
+        <% end  %>
     </ul>
   </div>
 
@@ -30,13 +31,18 @@
 
   <!-- here add an Event listener so that the status changes and the btns disappear -->
   <div class="Mes tondeuses">
-    <div class = "titre">
-    <h2> As a owner here are the tools I let: </h2></div>
-    <div class= "para">
+    <div class="titre">
+    <h2> Historique des locations de mes tondeuses</h2></div>
+    <div class="para">
     <ul>
       <% @bookings.each do |booking| %>
-      <li><%= booking.tool.name %> - <%= booking.begin_date %> - <%= booking.end_date %><%= booking.status %> - <%= link_to "confirm", confirm_booking_path(booking), method: :patch, class: 'btn btn-primary' %> - <%= link_to "refuse",refuse_booking_path(booking), method: :patch, class: 'btn btn-danger' %></li>
-      <% end %>
+      <div class="d-flex justify-content-between" >
+
+        <div class="date tag"> <li><%= link_to(booking.tool.name, tool_path(booking.tool))%> - du <%= booking.begin_date.strftime("%d/%m/%Y") %> au <%= booking.end_date.strftime("%d/%m/%Y") %></div>
+        <div>demande <%= french_status(booking) %></div>
+        <div class="status">   <%= link_to "accepter", confirm_booking_path(booking), method: :patch, class: 'btn btn-success' %> <%= link_to "refuser",refuse_booking_path(booking), method: :patch, class: 'btn btn-danger' %></div></li>
+      </div>
+     <% end %>
     </ul>
   </div>
 

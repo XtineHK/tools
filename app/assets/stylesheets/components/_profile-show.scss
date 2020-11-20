@@ -1,12 +1,18 @@
-
+.titre p{
+  font-family: arial;
+  color:#ADC1B0;
+  font-size: 20px;
+  text-align: center;
+}
 
 .titre h2{
   font-family: arial;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
   background-color:#ADC1B0;
   color :white;
-  text-align: center;
+  padding-left: 10px;
+
 }
 
 .para {
@@ -14,5 +20,9 @@
   font-weight: bold;
   font-size: 20px;
   color:#ADC1B0;
-  text-align: center;
+}
+
+.packs {
+  display: flex;
+  justify-content: space-between;
 }
