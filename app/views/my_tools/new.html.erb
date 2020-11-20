@@ -1,12 +1,17 @@
 <div class=‘container’>
-  <%= simple_form_for @my_tool, url: my_tools_path do |f| %>
-    <%= f.input :name %>
-    <%= f.input :location %>
-    <%= f.input :description %>
-    <%= f.input :daily_price %>
-    <%= f.input :photo %>
-
-    <%= f.submit %>
-  <% end %>
+  <div class="col-sm-8 offset-sm-2 new-form-tool">
+    <div class="text-form-tool">
+      <%= simple_form_for @my_tool, url: my_tools_path do |f| %>
+      <%= f.input :name %></p>
+      <%= f.input :name %>
+      <%= f.input :location %>
+      <%= f.input :description %>
+      <%= f.input :daily_price %>
+      <%= f.input :photo %>
+        <div class="btn-submit">
+          <%= f.submit %>
+          <% end %>
+        </div>
+    </div>
+  </div>
 </div>
-

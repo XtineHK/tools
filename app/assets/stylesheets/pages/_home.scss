@@ -31,12 +31,11 @@
 
 }
 
-p{
+.introduction p{
   color:#616661;
   font-size: 16px;
   font-family: arial;
   text-align: center;
-;
 
 }
 
@@ -46,6 +45,7 @@ p{
   margin-left: auto;
   margin-right: auto;
   height: 300px;
+
 }
 
 .banner {
@@ -62,6 +62,7 @@ p{
   right: 0;
   left: 0;
   width: 100%;
+  box-shadow: 8px 8px 4px 4px rgba(102, 141, 107, 0.5);
 }
 
 .banner .text {
@@ -98,12 +99,10 @@ p{
 }
 
 .flex-item{
-  background-color:#ADC1B0;
   padding: 15px;
   font-family: arial;
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(97, 97, 97);
+  font-size: 25px;
+  color:#87978a;
   border-radius: 10px;
 }
 
@@ -148,9 +147,30 @@ p{
 
 .card-category {
   background-size: cover;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ADC1B0;
+  box-shadow: 8px 8px 4px 4px rgba(102, 141, 107, 0.5);
+
   // background-position: center;
 }
 
+.card-category h3 {
+  font-family: arial;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ADC1B0;
+  text-align: center;
+
+}
+
+.card-category p {
+  font-family: arial;
+  font-size: 16px;
+  color: #ADC1B0;
+  text-align: center;
+  initial-letter: 10px;
+}
 
 // // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {

@@ -12,9 +12,9 @@ class BookingsController < ApplicationController
     @booking.price_to_invoice = (@booking.end_date - @booking.begin_date).to_i / 1.day * @tool.daily_price
 
     if @booking.save
-      redirect_to profile_path, notice: 'Votre demande de réservation est envoyée au propriétaire et en attente de confirmation'
-    else
-      render :new
+     redirect_to profile_path, notice: 'Votre demande de réservation est envoyée au propriétaire et en attente de confirmation'
+     else
+     render :new
     end
   end
 
