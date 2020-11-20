@@ -3,16 +3,15 @@ class ToolsController < ApplicationController
 
   def index
     @tools = Tool.all
-
+    @tools = @tools.where.not(user_id: current_user.id) if current_user
     @markers = @tools.geocoded.map do |tool|
-          {
-            lat: tool.latitude,
-            lng: tool.longitude,
-            infoWindow: render_to_string(partial: "info_window", locals: { tool: tool })
-          }
-        end
+      {
+        lat: tool.latitude,
+        lng: tool.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { tool: tool })
+      }
+    end
   end
-
 
   def show
     @tool = Tool.find(params[:id])
